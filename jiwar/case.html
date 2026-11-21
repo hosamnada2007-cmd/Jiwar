@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الحالة النشطة | جِوار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+<div class="container page">
+  <div class="notice" style="margin-bottom:1.5rem">قدّم إسعافات أولية فقط حتى وصول الإسعاف، واتصل بـ <a href="tel:123"><strong>123</strong></a> إن لم يكن قد اتصل أحد.</div>
+  <h1>الحالة النشطة</h1>
+  <div class="grid-2">
+    <div class="stack">
+      <div class="card" id="case-card"><div class="skeleton"></div></div>
+      <div id="guide-box"></div>
+      <button type="button" id="resolve-btn" class="btn btn-primary btn-lg hidden">أنهيت الحالة</button>
+    </div>
+    <div id="map" class="map" aria-label="موقع الحالة"></div>
+  </div>
+</div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/guide-data.js"></script>
+  <script src="js/active_case.js"></script>
+</body>
+</html>

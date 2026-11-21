@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>إنشاء حساب | جِوار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+<div class="container auth-wrap">
+  <div class="card">
+    <h1 style="font-size:2rem">إنشاء حساب</h1>
+    <form id="register-form" class="form" novalidate>
+      <fieldset class="field" style="border:0;padding:0;margin:0">
+        <span class="legend">نوع الحساب</span>
+        <div class="choice-grid">
+          <label class="choice"><input type="radio" name="role" value="requester" checked><span>أحتاج مساعدة</span></label>
+          <label class="choice"><input type="radio" name="role" value="volunteer"><span>متطوع</span></label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="full_name">الاسم</label><input type="text" id="full_name" name="full_name" autocomplete="name" required></div>
+      <div class="field"><label for="phone">رقم الموبايل</label><div class="phone-field"><span class="prefix">+20</span><input type="tel" id="phone" name="phone" inputmode="numeric" placeholder="1012345678" maxlength="13" autocomplete="tel-national" required></div><span class="hint">اكتب الرقم بدون الصفر الأول. مثال: 1012345678</span></div>
+      <div class="field"><label for="password">كلمة المرور</label><input type="password" id="password" name="password" autocomplete="new-password" required><span class="hint">8 أحرف على الأقل، وفيها حرف ورقم.</span></div>
+      <div class="field"><label for="governorate">المحافظة</label><select id="governorate" name="governorate" required></select></div>
+      <div class="field"><label for="city">المدينة أو المركز</label><select id="city" name="city" required disabled></select></div>
+      <div id="volunteer-fields" class="form hidden">
+        <div class="banner pending">لا يتم تفعيل أي متطوع قبل مراجعة الإدارة لمؤهله وشهادته.</div>
+        <div class="field"><label for="age">السن</label><input type="number" id="age" name="age" min="18" max="65"></div>
+        <div class="field"><label for="qualification">المؤهل أو العمل</label>
+          <select id="qualification" name="qualification">
+            <option value="">اختر</option>
+            <option>طالب/ة طب</option><option>طبيب/ة</option><option>طالب/ة تمريض</option><option>ممرض/ة</option>
+            <option>صيدلي/ة</option><option>مسعف/ة</option><option>حاصل/ة على دورة إسعافات أولية أو CPR</option>
+            <option>مدرّب/ة إسعافات أولية</option><option>مجال صحي آخر</option>
+          </select>
+        </div>
+        <div class="field"><label for="institution">الجهة</label><input type="text" id="institution" name="institution" placeholder="الكلية أو المستشفى أو جهة التدريب"></div>
+        <div class="field"><label for="certificate_no">رقم الشهادة أو الكارنيه (اختياري)</label><input type="text" id="certificate_no" name="certificate_no"></div>
+        <div class="field"><label for="certificate_file">صورة الشهادة أو الكارنيه</label><input type="file" id="certificate_file" name="certificate_file" accept="image/*"><span class="hint">صورة واضحة، أقل من 700 كيلوبايت.</span></div>
+        <fieldset class="field" style="border:0;padding:0;margin:0">
+          <span class="legend">مهاراتك</span>
+          <div id="skills-list" class="choice-grid"><div class="skeleton"></div></div>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="agree"><span>أقرّ بصحة البيانات والمستندات المرفقة، وأفهم أن حسابي لن يُفعَّل إلا بعد موافقة الإدارة.</span></label>
+      </div>
+      <p id="form-error" class="error-text" role="alert"></p>
+      <button type="submit" class="btn btn-primary btn-lg">إنشاء الحساب</button>
+    </form>
+    <p class="hint" style="margin-top:1rem">عندك حساب؟ <a href="login.html">سجّل الدخول</a></p>
+  </div>
+</div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/egypt.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة المتطوع | جِوار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+<div class="container page">
+  <h1>لوحة المتطوع</h1>
+  <p class="lead" id="v-name">...</p>
+  <div id="verify-banner" style="margin-bottom:1.2rem"></div>
+  <div id="stats" class="stat-grid" style="margin-bottom:1.5rem"></div>
+  <div class="grid-2">
+    <div class="stack">
+      <div class="card">
+        <label class="switch"><input type="checkbox" id="availability"><span class="track"></span><span id="availability-label">غير متاح</span></label>
+        <p class="hint" style="margin-top:.6rem">لا تصلك تنبيهات إلا وأنت موثّق ومتاح.</p>
+      </div>
+      <div class="card">
+        <h2 style="font-size:1.4rem">التنبيهات الواردة</h2>
+        <div id="alerts"></div>
+      </div>
+    </div>
+    <form class="card form" id="profile-form">
+      <h2 style="font-size:1.4rem">ملفي</h2>
+      <div class="field"><label for="qualification">المؤهل أو العمل</label>
+        <select id="qualification" name="qualification">
+          <option value="">اختر</option>
+            <option>طالب/ة طب</option><option>طبيب/ة</option><option>طالب/ة تمريض</option><option>ممرض/ة</option>
+            <option>صيدلي/ة</option><option>مسعف/ة</option><option>حاصل/ة على دورة إسعافات أولية أو CPR</option>
+            <option>مدرّب/ة إسعافات أولية</option><option>مجال صحي آخر</option>
+        </select>
+      </div>
+      <div class="field"><label for="institution">الجهة</label><input type="text" id="institution" name="institution"></div>
+      <div class="field"><label for="certificate_no">رقم الشهادة أو الكارنيه</label><input type="text" id="certificate_no" name="certificate_no"></div>
+      <div class="field"><label for="certificate_file">استبدال صورة الشهادة (اختياري)</label><input type="file" id="certificate_file" name="certificate_file" accept="image/*"></div>
+      <fieldset class="field" style="border:0;padding:0;margin:0"><span class="legend">مهاراتي</span><div id="skills-list" class="choice-grid"></div></fieldset>
+      <div><span class="legend">موقعي</span><p class="hint">اضغط على الخريطة لتحديد مكانك.</p><div id="map" class="map" style="height:260px"></div></div>
+      <label class="switch"><input type="checkbox" id="consent"><span class="track"></span><span>أوافق على مشاركة موقعي مع النظام</span></label>
+      <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+    </form>
+  </div>
+</div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/egypt.js"></script>
+  <script src="js/guide-data.js"></script>
+  <script src="js/volunteer.js"></script>
+</body>
+</html>

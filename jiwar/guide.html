@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل الإسعافات الأولية | جِوار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+<div class="container page">
+  <h1>دليل الإسعافات الأولية</h1>
+  <p class="lead">إرشادات سريعة لأشهر الحالات الطارئة: ماذا تفعل وماذا تتجنب إلى أن يصل الإسعاف.</p>
+  <div class="card" style="margin-bottom:1.5rem">
+    <h2 style="font-size:1.3rem">قواعد عامة قبل أي إسعاف</h2>
+    <ul class="rules" id="rules"></ul>
+  </div>
+  <div class="guide-tools">
+    <input type="search" id="guide-search" placeholder="ابحث: حروق، اختناق، سكر، كسر..." aria-label="بحث في الإرشادات">
+    <span class="hint" id="guide-count"></span>
+  </div>
+  <div id="guide-list"></div>
+  <p class="hint">إرشادات عامة للتوعية، ولا تغني عن التدريب العملي أو استشارة الطبيب. في أي حالة خطرة اتصل بالإسعاف على 123.</p>
+</div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/guide-data.js"></script>
+  <script src="js/guide.js"></script>
+</body>
+</html>

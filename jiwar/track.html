@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>متابعة الطلب | جِوار</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Reem+Kufi:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+<div class="container page">
+  <div class="notice" style="margin-bottom:1.5rem">لا تنتظر التطبيق وحده: اتصل بالإسعاف <a href="tel:123"><strong>123</strong></a>.</div>
+  <h1>متابعة طلبك</h1>
+  <ol class="steps" id="steps" aria-label="مراحل الطلب">
+    <li data-step="open">جارٍ البحث عن متطوع</li>
+    <li data-step="accepted">تم قبول الطلب</li>
+    <li data-step="resolved">وصل المتطوع</li>
+  </ol>
+  <div class="grid-2">
+    <div class="stack">
+      <div class="card" id="status-card"><div class="skeleton"></div></div>
+      <div class="card hidden" id="volunteer-card">
+        <h2 style="font-size:1.4rem">متطوعك</h2>
+        <p><strong id="v-name"></strong><br><span id="v-skill"></span></p>
+        <p class="hint" id="v-meta"></p>
+      </div>
+      <div class="card hidden" id="rate-card">
+        <h2 style="font-size:1.4rem">قيّم المتطوع</h2>
+        <form id="rate-form" class="form">
+          <div class="choice-grid" style="grid-template-columns:repeat(5,1fr)">
+            <label class="choice"><input type="radio" name="score" value="1"><span>١</span></label>
+            <label class="choice"><input type="radio" name="score" value="2"><span>٢</span></label>
+            <label class="choice"><input type="radio" name="score" value="3"><span>٣</span></label>
+            <label class="choice"><input type="radio" name="score" value="4"><span>٤</span></label>
+            <label class="choice"><input type="radio" name="score" value="5" checked><span>٥</span></label>
+          </div>
+          <button type="submit" class="btn btn-primary">إرسال التقييم</button>
+        </form>
+      </div>
+      <button type="button" id="cancel-btn" class="btn btn-outline-danger hidden">إلغاء الطلب</button>
+    </div>
+    <div class="stack">
+      <div id="map" class="map" aria-label="موقع الحالة"></div>
+      <div id="guide-box"></div>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/guide-data.js"></script>
+  <script src="js/track.js"></script>
+</body>
+</html>
